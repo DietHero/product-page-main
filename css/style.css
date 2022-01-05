@@ -51,10 +51,23 @@ a {
     transform: translate(0, -2rem);
     margin-bottom: 0;
 }
-
+.logo__container {
+    width: 3.5rem;
+    height: 3.5rem;
+    align-items: center;
+    transform: translate(16rem, -3rem);
+    position: fixed;
+    
+}
+.logo {
+    background-image: url(../images/logo-mastercraft.svg);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 .hero__header {
     text-align: center;
-    margin-block-end: 0.25rem
+    margin-block-end: 0.25rem;
 }
 .hero__sub-header {
     color: hsl(0, 0%, 48%);
