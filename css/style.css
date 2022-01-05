@@ -1,0 +1,194 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    color: black;
+    font-family: 'Commissioner', sans-serif;
+}
+
+.header {
+    background-image: url(../images/image-hero-desktop.jpg);
+    width: 100%;
+    height: 20rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    background-color: white;
+    width: 35rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+/* NAV */
+
+.nav__links {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    margin-block-start: 0rem;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+.nav__link {
+    text-decoration: none;
+}
+
+.nav__link-item {
+    padding: 1rem;
+}
+
+/* HERO */
+.hero {
+    transform: translate(0, -2rem);
+    margin-bottom: 0;
+}
+
+.hero__header {
+    text-align: center;
+    margin-block-end: 0.25rem
+}
+.hero__sub-header {
+    color: hsl(0, 0%, 48%);
+    font-size: 12px;
+    text-align: center;
+}
+.hero__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem ;
+}
+.hero__bookmark {
+    background-color: rgb(236, 233, 233);
+    width: 8rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+.hero__bookmark:hover {
+    background-color:hsl(175, 39%, 89%);
+    color:hsl(176, 72%, 28%)
+}
+
+.number__container {
+    display: flex;
+    justify-content: space-evenly;    
+    margin: 1.5rem 0.5rem ;
+    margin-right: 5rem;
+}
+.number {
+    padding: 0 1rem;
+}
+.number1 {
+    border-right:1px solid rgb(236, 233, 233);
+}
+.number__big {
+    font-weight: 700;
+    font-size: 22px;
+}
+.number__small {
+    font-size: 12px;
+    color: hsl(0, 0%, 48%);
+}
+
+.numbers__line-grey {
+    height: 0.5rem;
+    margin: 1.5rem;
+    background-color:rgb(236, 233, 233);
+    border: none;
+    border-radius: 0.5rem;
+}
+.numbers__line-blue {
+    height: 0.5rem;
+    background-color:hsl(176, 50%, 47%);
+    border: none;
+    border-radius: 0.5rem;
+    margin-left: 1.5rem;
+    width: 25rem;
+    transform: translate(0, -2rem);
+}
+/* MAIN */
+
+.main {
+    background-color: rgb(236, 233, 233);;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.button {
+    background-color: hsl(176, 50%, 47%) ;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    width: 10rem;
+    height: 2.25rem;
+    cursor: pointer;
+    font-size: 12px; 
+    font-weight: 700;
+}
+
+.button:hover {
+    background-color: hsl(176, 72%, 28%);
+}
+.about {
+    padding: 1rem;
+}
+.about__description, .stand__description {
+    color: hsl(0, 0%, 48%);
+    font-size: 14px;
+}
+.stand {
+    border:1px solid rgb(236, 233, 233);
+    margin: 1rem 0;
+    padding: 1em;
+    border-radius: 0.5rem;
+}
+
+.stand__hero {
+    display: flex;
+    justify-content: space-between;
+}
+.stand__sub-header {
+    color: hsl(176, 50%, 47%) ;
+    font-size: 14px;
+    font-weight: 500;
+}
+.stand__footer {
+    display: flex;
+    justify-content: space-between;
+}
+.stand__number {
+    display: flex;
+}
+.stand__number-bold {
+    font-weight: 700;
+    font-size: 22px;
+}
+.stand__number-left {
+    padding-top: 0.75rem;
+    padding-left: 0.25rem;
+}
+.stand__button {
+   width: 8rem;
+    margin-top: 1rem;
+}
+.stand__button-out {
+    background-color: hsl(0, 0%, 48%); 
+
+}
+.stand__out {
+    opacity: 50%;
+}
