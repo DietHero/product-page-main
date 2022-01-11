@@ -33,8 +33,7 @@ black.addEventListener (
         if ( enterBlack.stye.display = 'none') {
             enterBlack.stye.display = 'block'
         }
-    }
-     
+    }   
 )
 bamboo.addEventListener (
     'click', 
