@@ -7,17 +7,17 @@ html, body {
     font-family: 'Commissioner', sans-serif;
 }
 
-.header {
-    background-image: url(../images/image-hero-desktop.jpg);
-    width: 100%;
-    height: 20rem;
-}
 ul {
     list-style-type: none;
 }
 a {
     text-decoration: none;
     color: white;
+}
+.header {
+    background-image: url(../images/image-hero-desktop.jpg);
+    width: 100%;
+    height: 20rem;
 }
 
 .container {
@@ -26,6 +26,22 @@ a {
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
+}
+.button {
+    background-color: hsl(176, 50%, 47%) ;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    width: 10rem;
+    height: 2.25rem;
+    cursor: pointer;
+    font-size: 12px; 
+    font-weight: 700;
+}
+
+.button:hover {
+    background-color: hsl(176, 72%, 28%);
 }
 /* NAV */
 
@@ -92,7 +108,10 @@ a {
     background-color:hsl(175, 39%, 89%);
     color:hsl(176, 72%, 28%)
 }
-
+/* NUMBERS */
+.numbers {
+    margin-bottom: 2rem ;
+}
 .number__container {
     display: flex;
     justify-content: space-evenly;    
@@ -139,31 +158,14 @@ a {
     align-items: center;
 }
 
-
-.button {
-    background-color: hsl(176, 50%, 47%) ;
-    color: white;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-    width: 10rem;
-    height: 2.25rem;
-    cursor: pointer;
-    font-size: 12px; 
-    font-weight: 700;
-}
-
-.button:hover {
-    background-color: hsl(176, 72%, 28%);
-}
 .about {
     padding: 1rem;
 }
-.about__description, .stand__description {
+.about__description, .stand__description, .support__sub-header {
     color: hsl(0, 0%, 48%);
     font-size: 14px;
 }
-.stand {
+.stand, .option{
     border:1px solid rgb(236, 233, 233);
     margin: 1rem 0;
     padding: 1em;
@@ -183,14 +185,14 @@ a {
     display: flex;
     justify-content: space-between;
 }
-.stand__number {
+.stand__number, .option__left {
     display: flex;
 }
-.stand__number-bold {
+.bold {
     font-weight: 700;
     font-size: 22px;
 }
-.stand__number-left {
+.left {
     padding-top: 0.75rem;
     padding-left: 0.25rem;
 }
@@ -202,6 +204,133 @@ a {
     background-color: hsl(0, 0%, 48%); 
 
 }
-.stand__out {
+.stand__out, .option_out {
     opacity: 50%;
 }
+
+/* SUPORT */
+
+.support {
+    position: absolute;
+    transform: translate(0rem, -2rem);
+    display: none;
+    z-index: 2;
+}
+.support__exit-container {
+    text-align: right;
+}
+.support__exit{
+    background-color:transparent ;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    font-weight: 700;
+}
+
+.option_hero {
+    display: flex;
+   justify-content:space-between;
+}
+.option_hero-free {
+    display: flex;
+}
+.option__header {
+    background-color:transparent ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    flex-basis: 45%;
+    text-align: left;
+    height: 2rem;
+    font-size: 16px;
+}
+
+.option__header:hover {
+color: hsl(176, 50%, 47%);
+}
+.option__sub-header {
+    color: hsl(176, 50%, 47%);
+    font-size: 16px;
+    margin-top: 0.25rem;
+    flex-basis: 40%;
+
+}
+.option__icon {
+    flex-basis: 5%;
+    margin-top: 0.25rem;
+}
+
+.option__left {
+    flex-basis: 10%;
+margin-top: 0.25rem;}
+
+
+.option__bold {
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    font-size: 16px;
+}
+.option__small {
+    padding-top: 0.25rem;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    font-size: 12px;
+}
+.option__description {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: hsl(0, 0%, 48%);
+  
+}
+.enter__bamboo {
+display: none ;
+}
+ .enter__black {
+    display: none ;
+    }
+.option__enter-container {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+.option__enter-header{
+    margin: 1rem;
+    color: hsl(0, 0%, 48%);
+}
+.option__enter-line {
+    margin: 1rem 0;
+  background-color: hsl(0, 0%, 48%);
+}
+
+.option__enter-input {
+    margin: 0.5rem;
+    border-radius: 1rem;
+    border:0.01rem solid hsl(0, 0%, 48%);
+    outline: none;
+    width: 6rem;
+    height: 2rem;
+    font-weight: 700;
+}
+.option__enter-input:hover,:active {
+    border:0.01rem solid hsl(176, 50%, 47%);
+}
+.option__enter-button {
+    width: 6rem;
+    margin: 0.5rem;
+}
+
+.thanks {
+    display: none;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
