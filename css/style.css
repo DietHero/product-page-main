@@ -264,7 +264,7 @@ color: hsl(176, 50%, 47%);
 
 .option__left {
     flex-basis: 10%;
-margin-top: 0.25rem;}
+    margin-top: 0.25rem;}
 
 
 .option__bold {
@@ -285,11 +285,15 @@ margin-top: 0.25rem;}
   
 }
 .enter__bamboo {
-display: none ;
-}
- .enter__black {
+display: none ;}
+
+.enter__black {
     display: none ;
     }
+.enter__bamboo-visible {
+    display: block;
+}    
+
 .option__enter-container {
     display: flex;
     margin-top: 1rem;
@@ -326,6 +330,9 @@ display: none ;
     width: 25rem;
     text-align: center; 
     justify-content: center;
+    position: absolute;
+    transform: translate(0rem, -2rem);
+    z-index: 2;
 }
 .thanks__icon {
     font-size: 50px;
