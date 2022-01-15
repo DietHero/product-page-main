@@ -10,10 +10,12 @@ html, body {
 ul {
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
     color: white;
 }
+
 .header {
     background-image: url(../images/image-hero-desktop.jpg);
     width: 100%;
@@ -27,8 +29,9 @@ a {
     margin-bottom: 1rem;
     padding: 1rem;
 }
+
 .button {
-    background-color: hsl(176, 50%, 47%) ;
+    background-color: hsl(176, 50%, 47%);
     color: white;
     border-radius: 1rem;
     border: none;
@@ -36,13 +39,17 @@ a {
     width: 10rem;
     height: 2.25rem;
     cursor: pointer;
-    font-size: 12px; 
+    font-size: 12px;
     font-weight: 700;
+}
+.button__menu {
+    display: none;
 }
 
 .button:hover {
     background-color: hsl(176, 72%, 28%);
 }
+
 /* NAV */
 
 .nav__links {
@@ -54,6 +61,7 @@ a {
     font-weight: 500;
 
 }
+
 .nav__link {
     text-decoration: none;
 }
@@ -67,34 +75,40 @@ a {
     transform: translate(0, -2rem);
     margin-bottom: 0;
 }
+
 .logo__container {
     width: 3.5rem;
     height: 3.5rem;
     align-items: center;
     transform: translate(16rem, -3rem);
     position: fixed;
-    
+
 }
+
 .logo {
     background-image: url(../images/logo-mastercraft.svg);
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
+
 .hero__header {
     text-align: center;
     margin-block-end: 0.25rem;
 }
+
 .hero__sub-header {
     color: hsl(0, 0%, 48%);
     font-size: 12px;
     text-align: center;
 }
+
 .hero__buttons {
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem ;
+    margin: 1.5rem;
 }
+
 .hero__bookmark {
     background-color: rgb(236, 233, 233);
     width: 8rem;
@@ -103,31 +117,47 @@ a {
     cursor: pointer;
     font-size: 12px;
     font-weight: 700;
+    display: flex;
 }
+
 .hero__bookmark:hover {
-    background-color:hsl(175, 39%, 89%);
-    color:hsl(176, 72%, 28%)
+    background-color: hsl(175, 39%, 89%);
+    color: hsl(176, 72%, 28%)
 }
+
+.hero__bookmark-icon {
+    padding: 0.8rem;
+}
+
+.hero__bookmark-text {
+    padding: 0.5rem;
+}
+
 /* NUMBERS */
 .numbers {
-    margin-bottom: 2rem ;
+    margin-bottom: 2rem;
 }
+
 .number__container {
     display: flex;
-    justify-content: space-evenly;    
-    margin: 1.5rem 0.5rem ;
+    justify-content: space-evenly;
+    margin: 1.5rem 0.5rem;
     margin-right: 5rem;
 }
+
 .number {
     padding: 0 1rem;
 }
+
 .number1 {
-    border-right:1px solid rgb(236, 233, 233);
+    border-right: 1px solid rgb(236, 233, 233);
 }
+
 .number__big {
     font-weight: 700;
     font-size: 22px;
 }
+
 .number__small {
     font-size: 12px;
     color: hsl(0, 0%, 48%);
@@ -136,23 +166,26 @@ a {
 .numbers__line-grey {
     height: 0.5rem;
     margin: 1.5rem;
-    background-color:rgb(236, 233, 233);
+    background-color: rgb(236, 233, 233);
     border: none;
     border-radius: 0.5rem;
 }
+
 .numbers__line-blue {
     height: 0.5rem;
-    background-color:hsl(176, 50%, 47%);
+    background-color: hsl(176, 50%, 47%);
     border: none;
     border-radius: 0.5rem;
     margin-left: 1.5rem;
     width: 25rem;
     transform: translate(0, -2rem);
 }
+
 /* MAIN */
 
 .main {
-    background-color: rgb(236, 233, 233);;
+    background-color: rgb(236, 233, 233);
+    ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,12 +194,14 @@ a {
 .about {
     padding: 1rem;
 }
+
 .about__description, .stand__description, .support__sub-header {
     color: hsl(0, 0%, 48%);
     font-size: 14px;
 }
-.stand, .option{
-    border:1px solid rgb(236, 233, 233);
+
+.stand, .option {
+    border: 1px solid rgb(236, 233, 233);
     margin: 1rem 0;
     padding: 1em;
     border-radius: 0.5rem;
@@ -176,34 +211,42 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
 .stand__sub-header {
-    color: hsl(176, 50%, 47%) ;
+    color: hsl(176, 50%, 47%);
     font-size: 14px;
     font-weight: 500;
 }
+
 .stand__footer {
     display: flex;
     justify-content: space-between;
 }
+
 .stand__number, .option__left {
     display: flex;
 }
+
 .bold {
     font-weight: 700;
     font-size: 22px;
 }
+
 .left {
     padding-top: 0.75rem;
     padding-left: 0.25rem;
 }
+
 .stand__button {
-   width: 8rem;
+    width: 8rem;
     margin-top: 1rem;
 }
+
 .stand__button-out {
-    background-color: hsl(0, 0%, 48%); 
+    background-color: hsl(0, 0%, 48%);
 
 }
+
 .stand__out, .option_out {
     opacity: 50%;
 }
@@ -216,26 +259,30 @@ a {
     display: none;
     z-index: 2;
 }
+
 .support__exit-container {
     text-align: right;
 }
-.support__exit{
-    background-color:transparent ;
+
+.support__exit {
+    background-color: transparent;
     border: none;
     outline: none;
-    cursor: pointer; 
+    cursor: pointer;
     font-weight: 700;
 }
 
 .option_hero {
     display: flex;
-   justify-content:space-between;
+    justify-content: space-between;
 }
+
 .option_hero-free {
     display: flex;
 }
+
 .option__header {
-    background-color:transparent ;
+    background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
@@ -248,8 +295,9 @@ a {
 }
 
 .option__header:hover {
-color: hsl(176, 50%, 47%);
+    color: hsl(176, 50%, 47%);
 }
+
 .option__sub-header {
     color: hsl(176, 50%, 47%);
     font-size: 16px;
@@ -257,6 +305,7 @@ color: hsl(176, 50%, 47%);
     flex-basis: 40%;
 
 }
+
 .option__icon {
     flex-basis: 5%;
     margin-top: 0.25rem;
@@ -264,7 +313,8 @@ color: hsl(176, 50%, 47%);
 
 .option__left {
     flex-basis: 10%;
-    margin-top: 0.25rem;}
+    margin-top: 0.25rem;
+}
 
 
 .option__bold {
@@ -272,54 +322,61 @@ color: hsl(176, 50%, 47%);
     margin-block-end: 0rem;
     font-size: 16px;
 }
+
 .option__small {
     padding-top: 0.25rem;
     margin-block-start: 0rem;
     margin-block-end: 0rem;
     font-size: 12px;
 }
+
 .option__description {
     margin-left: 2rem;
     margin-top: 1rem;
     color: hsl(0, 0%, 48%);
-  
+
 }
+
+/* ENTER */
+
 .enter__bamboo {
-display: none ;}
+    display: none;
+}
 
 .enter__black {
-    display: none ;
-    }
-.enter__bamboo-visible {
-    display: block;
-}    
+    display: none;
+}
 
 .option__enter-container {
     display: flex;
     margin-top: 1rem;
     justify-content: space-between;
 }
-.option__enter-header{
+
+.option__enter-header {
     margin: 1rem;
     color: hsl(0, 0%, 48%);
 }
+
 .option__enter-line {
     margin: 1rem 0;
-  background-color: hsl(0, 0%, 48%);
+    background-color: hsl(0, 0%, 48%);
 }
 
 .option__enter-input {
     margin: 0.5rem;
     border-radius: 1rem;
-    border:0.01rem solid hsl(0, 0%, 48%);
+    border: 0.01rem solid hsl(0, 0%, 48%);
     outline: none;
     width: 6rem;
     height: 2rem;
     font-weight: 700;
 }
-.option__enter-input:hover,:active {
-    border:0.01rem solid hsl(176, 50%, 47%);
+
+.option__enter-input:hover, :active {
+    border: 0.01rem solid hsl(176, 50%, 47%);
 }
+
 .option__enter-button {
     width: 6rem;
     margin: 0.5rem;
@@ -328,29 +385,34 @@ display: none ;}
 .thanks {
     display: none;
     width: 25rem;
-    text-align: center; 
+    text-align: center;
     justify-content: center;
     position: absolute;
     transform: translate(0rem, -2rem);
     z-index: 2;
 }
+
 .thanks__icon {
     font-size: 50px;
     color: hsl(176, 50%, 47%);
 }
+
 .thanks__header {
     font-weight: 700;
     margin: 1rem;
     font-size: 20px;
 
 }
+
 .thanks__description {
     color: hsl(0, 0%, 48%);
 }
+
 .thanks__button {
     margin: 1rem;
     width: 6rem;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -360,4 +422,152 @@ display: none ;}
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-  }
+}
+
+@media (max-width: 768px) {
+
+    .logo__container {
+        transform: translate(8.5rem, -3rem);
+
+    }
+
+    .container {
+        width: 20rem;
+    }
+
+    .nav__buttons-container {
+        display: flex;
+        justify-content: right;
+    }
+    .button__menu, .button__exit {
+        color: white; 
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: block;
+        text-align: right;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 20px;
+    }
+    .button__exit {
+        display: none;
+        z-index: 3;
+    }
+
+    .hero__bookmark-text {
+        display: none;
+    }
+
+    .hero__bookmark {
+        width: 3rem;
+        border-radius: 4rem;
+    }
+
+    .stand__hero {
+        flex-direction: column;
+    }
+
+    .stand__footer {
+        flex-direction: column;
+    }
+
+    .stand__header {
+        margin-block-end: 0;
+    }
+
+    .stand__button {
+        margin-top: 0;
+    }
+
+    .number__container {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0rem;
+    }
+
+    .number1 {
+        border-right: none;
+        border-bottom: 1px solid rgb(236, 233, 233);
+    }
+
+    .number {
+        margin: 0 3rem;
+        padding: 1rem;
+    }
+
+    .number__big {
+        font-size: 28px;
+    }
+
+    .numbers__line-blue {
+
+        width: 12rem;
+
+    }
+    .option_hero {
+      flex-wrap: wrap;
+    }
+    .option__header {
+        flex-basis: 80%;
+       
+    }
+    .nav__links {
+        display: none;
+    }
+    .nav__links-click {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        width: 20rem;
+        height: 15rem;
+        border-radius: 6px;
+        transform: translate(10%, 0);
+        padding-inline-start: 0;
+        z-index: 3;
+        visibility: visible;
+    }
+    
+    a {
+        color: black;
+    }
+    .nav__link-item {
+        margin: 1rem;
+        font-size: 22px;
+    }
+    
+    .option__sub-header {
+        flex-basis: 80%;
+    
+    }
+    
+    .option__icon {
+        flex-basis: 5%;
+        margin-top: 0.25rem;
+    }
+    
+    .option__left {
+        flex-basis: 10%;
+        margin-top: 0.25rem;
+    }
+    .option__description {
+        margin-left: 0.5rem;
+       
+    }
+    .overlay {
+       
+        width: 100%;
+        height: 350%;
+        
+    }
+
+.option__enter-container {
+    flex-direction: column;
+    align-items: center;
+}
+}

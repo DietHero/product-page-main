@@ -10,6 +10,25 @@ var continueButtons = document.querySelectorAll('.option__enter-button')
 var thanks = document.querySelector('.thanks')
 var thanksButton = document.querySelector('.thanks__button')
 var noReward = document.querySelector('.option__header-free')
+var buttonMenu = document.querySelector('.button__menu')
+var navLinks = document.querySelector('.nav__links')
+var buttonExit = document.querySelector('.button__exit')
+var navLinksClick = document.querySelector('.nav__links-click')
+var navLinkItem = document.querySelectorAll('.nav__link-item')
+var input = document.querySelectorAll('.option__enter-input')
+
+input.forEach(element =>  {
+    element.addEventListener ('change',
+    () => {
+        continueButtons.forEach(button => {
+            if (input.value === "") {
+                button.disabled = true; 
+            } else {
+                button.disabled = false;
+            }
+        })
+    })
+})
 
 selectButton.forEach(button => {
     button.addEventListener (
@@ -71,3 +90,35 @@ thanksButton.addEventListener (
     }
 )
 
+buttonMenu.addEventListener (
+    'click',
+    () => {
+        navLinks.classList.add('nav__links-click')
+        overlay.style.display = 'block'
+        buttonMenu.style.display= 'none'
+        buttonExit.style.display = 'block'
+
+    }
+ 
+)
+
+buttonExit.addEventListener (
+    'click',
+    () => {
+        navLinks.classList.remove('nav__links-click')
+        overlay.style.display = 'none'
+        buttonMenu.style.display = 'block'
+        buttonExit.style.display = 'none'
+    }
+)
+
+navLinkItem.forEach (element => element.addEventListener (
+    'click', 
+    () => {
+        navLinks.classList.remove('nav__links-click')
+        overlay.style.display = 'none'
+        buttonMenu.style.display = 'block'
+        buttonExit.style.display = 'none'
+    }
+)
+   ) 
