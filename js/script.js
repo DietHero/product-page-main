@@ -31,6 +31,21 @@ var iconBlack = document.querySelector('.option__icon-black')
 var iconBamboo = document.querySelector('.option__icon-bamboo')
 var number = 89.914
 var backersNumber = 5.007
+var state = 0
+
+function reset () {
+    support.style.display = 'none';
+    overlay.style.display = 'none';
+    thanks.style.display = 'none';
+    enterBamboo.style.display = 'none';
+    optionBamboo.style.borderColor = ' rgb(236, 233, 233)';
+    iconBamboo.innerHTML = '<i class="far fa-circle"></i>';
+    enterBlack.style.display = 'none';
+    optionBlack.style.borderColor = 'rgb(236, 233, 233)';
+    iconBlack.innerHTML = '<i class="far fa-circle"></i>';
+    inputBamboo.value = '';
+    inputBlack.value = '';
+}
 
 
 inputBamboo.addEventListener(
@@ -41,8 +56,8 @@ inputBamboo.addEventListener(
         } else {
             continueBamboo.disabled = false;
 
-            var newNumber = number + (Number(inputBamboo.value) * 0.001)
-            numbersLeft.innerHTML = '$' + newNumber.toFixed(3)
+            var newNumber = number + (Number(inputBamboo.value) * 0.001);
+            numbersLeft.innerHTML = '$' + newNumber.toFixed(3);
             number = newNumber
          
 
@@ -78,18 +93,18 @@ selectButton.forEach(button => {
     button.addEventListener(
         'click',
         function () {
-            support.style.display = 'block'
-            overlay.style.display = 'block'
-            enterBamboo.style.display = 'none'
-            enterBlack.style.display = 'none'
+            support.style.display = 'block';
+            overlay.style.display = 'block';
+            enterBamboo.style.display = 'none';
+            enterBlack.style.display = 'none';
         }
     )
 })
 noReward.addEventListener(
     'click',
     () => {
-        support.style.display = 'none'
-        thanks.style.display = 'block'
+        support.style.display = 'none';
+        thanks.style.display = 'block';
     }
 )
 
@@ -97,9 +112,9 @@ noReward.addEventListener(
 bambooButton.addEventListener(
     'click',
     () => {
-        enterBamboo.style.display = 'block'
-        optionBamboo.style.borderColor = ' hsl(176, 50%, 47%)'
-        iconBamboo.innerHTML = '<i class="fas fa-dot-circle"></i>'
+        enterBamboo.style.display = 'block';
+        optionBamboo.style.borderColor = ' hsl(176, 50%, 47%)';
+        iconBamboo.innerHTML = '<i class="fas fa-dot-circle"></i>';
 
     }
 )
@@ -107,8 +122,8 @@ bambooButton.addEventListener(
 blackButton.addEventListener(
     'click',
     () => {
-        enterBlack.style.display = 'block'
-        optionBlack.style.borderColor = 'hsl(176, 50%, 47%)'
+        enterBlack.style.display = 'block';
+        optionBlack.style.borderColor = 'hsl(176, 50%, 47%)';;
         iconBlack.innerHTML = '<i class="fas fa-dot-circle"></i>'
     }
 )
@@ -117,53 +132,29 @@ continueButtons.forEach(continueButton => {
     continueButton.addEventListener(
         'click',
         () => {
-            support.style.display = 'none'
-            thanks.style.display = 'block'
+            support.style.display = 'none';
+            thanks.style.display = 'block';
         }
     )
 })
 
 exit.addEventListener(
     'click',
-    () => {
-        support.style.display = 'none'
-        overlay.style.display = 'none'
-        thanks.style.display = 'none'
-        enterBamboo.style.display = 'none'
-        optionBamboo.style.borderColor = ' rgb(236, 233, 233)'
-        iconBamboo.innerHTML = '<i class="far fa-circle"></i>'
-        enterBlack.style.display = 'none'
-        optionBlack.style.borderColor = 'rgb(236, 233, 233)'
-        iconBlack.innerHTML = '<i class="far fa-circle"></i>'
-        inputBamboo.value = ''
-        inputBlack.value = ''
-    }
+    reset
 )
 
 thanksButton.addEventListener(
     'click',
-    () => {
-        support.style.display = 'none'
-        overlay.style.display = 'none'
-        thanks.style.display = 'none'
-        enterBamboo.style.display = 'none'
-        optionBamboo.style.borderColor = ' rgb(236, 233, 233)'
-        iconBamboo.innerHTML = '<i class="far fa-circle"></i>'
-        enterBlack.style.display = 'none'
-        optionBlack.style.borderColor = 'rgb(236, 233, 233)'
-        iconBlack.innerHTML = '<i class="far fa-circle"></i>'
-        inputBamboo.value = ''
-        inputBlack.value = ''
-    }
+    reset
 )
 
 buttonMenu.addEventListener(
     'click',
     () => {
-        navLinks.classList.add('nav__links-click')
-        overlay.style.display = 'block'
-        buttonMenu.style.display = 'none'
-        buttonExit.style.display = 'block'
+        navLinks.classList.add('nav__links-click');
+        overlay.style.display = 'block';
+        buttonMenu.style.display = 'none';
+        buttonExit.style.display = 'block';
 
     }
 
@@ -172,20 +163,20 @@ buttonMenu.addEventListener(
 buttonExit.addEventListener(
     'click',
     () => {
-        navLinks.classList.remove('nav__links-click')
-        overlay.style.display = 'none'
-        buttonMenu.style.display = 'block'
-        buttonExit.style.display = 'none'
+        navLinks.classList.remove('nav__links-click');
+        overlay.style.display = 'none';
+        buttonMenu.style.display = 'block';
+        buttonExit.style.display = 'none';
     }
 )
 
 navLinkItem.forEach(element => element.addEventListener(
     'click',
     () => {
-        navLinks.classList.remove('nav__links-click')
-        overlay.style.display = 'none'
-        buttonMenu.style.display = 'block'
-        buttonExit.style.display = 'none'
+        navLinks.classList.remove('nav__links-click');
+        overlay.style.display = 'none';
+        buttonMenu.style.display = 'block';
+        buttonExit.style.display = 'none';
     }
 )
 )
@@ -193,11 +184,22 @@ navLinkItem.forEach(element => element.addEventListener(
 bookmarkButton.addEventListener(
     'click',
     () => {
-        bookmarkIcon.style.backgroundColor = 'hsl(176, 72%, 28%)'
-        bookmarkIcon.style.color = 'white'
-        bookmarkText.innerHTML = 'Bookmarked'
-        bookmarkButton.style.backgroundColor = 'hsl(175, 39%, 89%)'
-        bookmarkButton.style.color = 'hsl(176, 72%, 28%)'
+        if (state === 0) {
+            bookmarkIcon.style.backgroundColor = 'hsl(176, 72%, 28%)';
+            bookmarkIcon.style.color = 'white';
+            bookmarkText.innerHTML = 'Bookmarked';
+            bookmarkButton.style.backgroundColor = 'hsl(175, 39%, 89%)';
+            bookmarkButton.style.color = 'hsl(176, 72%, 28%)';
+            state = 1;
+        } else {
+            bookmarkIcon.style.backgroundColor = 'hsl(0, 0%, 48%)';
+            bookmarkIcon.style.color = 'black';
+            bookmarkText.innerHTML = 'Bookmark';
+            bookmarkButton.style.backgroundColor = 'rgb(236, 233, 233)';
+            bookmarkButton.style.color = 'black';
+            state = 0;
+        }
+       
 
     }
 )
