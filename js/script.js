@@ -36,6 +36,7 @@ var blackNumber = 64
 var number = 89.914
 var backersNumber = 5.007
 var state = 0
+var lineWidth = 60
 
 function reset() {
     support.style.display = 'none';
@@ -76,6 +77,14 @@ continueBamboo.addEventListener(
         var newBambooNumber = babooNumber - 1;
         bambooNumberLeft.forEach(number => number.innerHTML = newBambooNumber);
         babooNumber = newBambooNumber;
+
+       
+        var newLineWidth = lineWidth + 0.5;
+        line.style.width = newLineWidth + '%'
+    
+        lineWidth = newLineWidth
+      
+    
     }
 )
 
@@ -104,6 +113,12 @@ continueBlack.addEventListener(
         var newBlackNumber = blackNumber - 1
         blackNumberLeft.forEach(number => number.innerHTML = newBlackNumber);
         blackNumber = newBlackNumber;
+
+        var newLineWidth = lineWidth + 1;
+        line.style.width = newLineWidth + '%'
+    
+        lineWidth = newLineWidth
+       
     }
 )
 

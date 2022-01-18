@@ -200,7 +200,8 @@ a {
     border: none;
     border-radius: 0.5rem;
     margin-left: 1.5rem;
-    width: 25rem;
+    width: 60%;
+    max-width: 92%;
     transform: translate(0, -2rem);
 }
 
