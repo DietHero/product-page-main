@@ -29,11 +29,15 @@ var optionBamboo = document.querySelector('.option__bamboo')
 var optionBlack = document.querySelector('.option__black')
 var iconBlack = document.querySelector('.option__icon-black')
 var iconBamboo = document.querySelector('.option__icon-bamboo')
+var blackNumberLeft = document.querySelectorAll('.black__number-left')
+var bambooNumberLeft = document.querySelectorAll('.bamboo__number-left')
+var babooNumber = 101
+var blackNumber = 64
 var number = 89.914
 var backersNumber = 5.007
 var state = 0
 
-function reset () {
+function reset() {
     support.style.display = 'none';
     overlay.style.display = 'none';
     thanks.style.display = 'none';
@@ -58,16 +62,23 @@ inputBamboo.addEventListener(
 
             var newNumber = number + (Number(inputBamboo.value) * 0.001);
             numbersLeft.innerHTML = '$' + newNumber.toFixed(3);
-            number = newNumber
-         
-
-            var newBuckersNumber = backersNumber + 0.001
-            backers.innerHTML = newBuckersNumber.toFixed(3)
-            backersNumber = newBuckersNumber
-    
+            number = newNumber;
         }
     }
 )
+continueBamboo.addEventListener(
+    'click',
+    () => {
+        var newBuckersNumber = backersNumber + 0.001
+        backers.innerHTML = newBuckersNumber.toFixed(3)
+        backersNumber = newBuckersNumber;
+
+        var newBambooNumber = babooNumber - 1;
+        bambooNumberLeft.forEach(number => number.innerHTML = newBambooNumber);
+        babooNumber = newBambooNumber;
+    }
+)
+
 inputBlack.addEventListener(
     'input',
     () => {
@@ -76,16 +87,23 @@ inputBlack.addEventListener(
         } else {
             continueBlack.disabled = false;
 
-            var newNumber = number + (Number(inputBlack.value) * 0.001)
-            numbersLeft.innerHTML = '$' + newNumber.toFixed(3)
+            var newNumber = number + (Number(inputBlack.value) * 0.001);
+            numbersLeft.innerHTML = '$' + newNumber.toFixed(3);
             number = newNumber
-         
-
-            var newBuckersNumber = backersNumber + 0.001
-            backers.innerHTML = newBuckersNumber.toFixed(3)
-            backersNumber = newBuckersNumber
-
         }
+    }
+)
+
+continueBlack.addEventListener(
+    'click',
+    () => {
+        var newBuckersNumber = backersNumber + 0.001;
+        backers.innerHTML = newBuckersNumber.toFixed(3);
+        backersNumber = newBuckersNumber;
+
+        var newBlackNumber = blackNumber - 1
+        blackNumberLeft.forEach(number => number.innerHTML = newBlackNumber);
+        blackNumber = newBlackNumber;
     }
 )
 
@@ -115,7 +133,9 @@ bambooButton.addEventListener(
         enterBamboo.style.display = 'block';
         optionBamboo.style.borderColor = ' hsl(176, 50%, 47%)';
         iconBamboo.innerHTML = '<i class="fas fa-dot-circle"></i>';
-
+        enterBlack.style.display = 'none';
+        optionBlack.style.borderColor = 'rgb(236, 233, 233)';
+        iconBlack.innerHTML = '<i class="far fa-circle"></i>';
     }
 )
 
@@ -123,8 +143,11 @@ blackButton.addEventListener(
     'click',
     () => {
         enterBlack.style.display = 'block';
-        optionBlack.style.borderColor = 'hsl(176, 50%, 47%)';;
-        iconBlack.innerHTML = '<i class="fas fa-dot-circle"></i>'
+        optionBlack.style.borderColor = 'hsl(176, 50%, 47%)';
+        iconBlack.innerHTML = '<i class="fas fa-dot-circle"></i>';
+        enterBamboo.style.display = 'none';
+        optionBamboo.style.borderColor = ' rgb(236, 233, 233)';
+        iconBamboo.innerHTML = '<i class="far fa-circle"></i>';
     }
 )
 
@@ -199,7 +222,7 @@ bookmarkButton.addEventListener(
             bookmarkButton.style.color = 'black';
             state = 0;
         }
-       
+
 
     }
 )

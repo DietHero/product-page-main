@@ -20,6 +20,13 @@ a {
     background-image: url(../images/image-hero-desktop.jpg);
     width: 100%;
     height: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header__name {
+    color: white;
+    margin: 1rem 5rem;
+    font-weight: 700;
 }
 
 .container {
@@ -70,7 +77,9 @@ a {
 .nav__link-item {
     padding: 1rem;
 }
-
+.nav__line  {
+    display: none;
+}
 /* HERO */
 .hero {
     transform: translate(0, -2rem);
@@ -414,7 +423,7 @@ a {
     
 }
 
-.option__input-container:hover, :active {
+.option__input-container:hover{
     border: 0.01rem solid hsl(176, 50%, 47%);
 }
 
@@ -469,11 +478,13 @@ a {
 
     .logo__container {
         transform: translate(8.5rem, -3rem);
-
     }
 
     .container {
         width: 20rem;
+    }
+    .header__name {
+        margin: 2rem 2rem;
     }
 
     .nav__buttons-container {
@@ -559,27 +570,31 @@ a {
     }
     .nav__links-click {
         display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        text-align: left;
         list-style: none;
         position: absolute;
         flex-direction: column;
         background-color: white;
         width: 20rem;
-        height: 15rem;
+        height: 14rem;
         border-radius: 6px;
-        transform: translate(10%, 0);
+        transform: translate(-90%, 0);
         padding-inline-start: 0;
         z-index: 3;
         visibility: visible;
+    }
+    .nav__line {
+        color: rgb(236, 233, 233);
+        display: block;
     }
     
     a {
         color: black;
     }
     .nav__link-item {
-        margin: 1rem;
-        font-size: 22px;
+        margin: 0.5rem;
+        font-size: 18px;
+        padding: 1rem;
     }
     
     .option__sub-header {
