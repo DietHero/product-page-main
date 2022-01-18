@@ -1,4 +1,5 @@
 var selectButton = document.querySelectorAll('.select__button')
+var selectButtonMain = document.querySelector('.select__button-main')
 var support = document.querySelector('.support')
 var exit = document.querySelector('.support__exit')
 var bambooButton = document.querySelector('.bamboo__button')
@@ -52,6 +53,65 @@ function reset() {
     inputBlack.value = '';
 }
 
+selectButtonMain.addEventListener ('click',
+() => {
+    support.style.display = 'block';
+    support.style.transform = 'translateY(-2rem)'
+    overlay.style.display = 'block';
+    enterBamboo.style.display = 'none';
+    enterBlack.style.display = 'none';
+    thanks.style.transform = 'translateY(-2rem)'
+})
+ 
+
+
+selectButton.forEach(button => {
+    button.addEventListener(
+        'click',
+        function () {
+            support.style.display = 'block';
+            support.style.transform = 'translateY(30rem)'
+            overlay.style.display = 'block';
+            enterBamboo.style.display = 'none';
+            enterBlack.style.display = 'none';
+            thanks.style.transform = 'translateY(35rem)'
+        }
+    )
+})
+
+bambooButton.addEventListener(
+    'click',
+    () => {
+        enterBamboo.style.display = 'block';
+        optionBamboo.style.borderColor = ' hsl(176, 50%, 47%)';
+        iconBamboo.innerHTML = '<i class="fas fa-dot-circle"></i>';
+        enterBlack.style.display = 'none';
+        optionBlack.style.borderColor = 'rgb(236, 233, 233)';
+        iconBlack.innerHTML = '<i class="far fa-circle"></i>';
+    }
+)
+
+blackButton.addEventListener(
+    'click',
+    () => {
+        enterBlack.style.display = 'block';
+        optionBlack.style.borderColor = 'hsl(176, 50%, 47%)';
+        iconBlack.innerHTML = '<i class="fas fa-dot-circle"></i>';
+        enterBamboo.style.display = 'none';
+        optionBamboo.style.borderColor = ' rgb(236, 233, 233)';
+        iconBamboo.innerHTML = '<i class="far fa-circle"></i>';
+    }
+)
+
+continueButtons.forEach(continueButton => {
+    continueButton.addEventListener(
+        'click',
+        () => {
+            support.style.display = 'none';
+            thanks.style.display = 'block';
+        }
+    )
+})
 
 inputBamboo.addEventListener(
     'input',
@@ -122,17 +182,7 @@ continueBlack.addEventListener(
     }
 )
 
-selectButton.forEach(button => {
-    button.addEventListener(
-        'click',
-        function () {
-            support.style.display = 'block';
-            overlay.style.display = 'block';
-            enterBamboo.style.display = 'none';
-            enterBlack.style.display = 'none';
-        }
-    )
-})
+
 noReward.addEventListener(
     'click',
     () => {
@@ -140,41 +190,15 @@ noReward.addEventListener(
         thanks.style.display = 'block';
     }
 )
-
-
-bambooButton.addEventListener(
+buttonExit.addEventListener(
     'click',
     () => {
-        enterBamboo.style.display = 'block';
-        optionBamboo.style.borderColor = ' hsl(176, 50%, 47%)';
-        iconBamboo.innerHTML = '<i class="fas fa-dot-circle"></i>';
-        enterBlack.style.display = 'none';
-        optionBlack.style.borderColor = 'rgb(236, 233, 233)';
-        iconBlack.innerHTML = '<i class="far fa-circle"></i>';
+        navLinks.classList.remove('nav__links-click');
+        overlay.style.display = 'none';
+        buttonMenu.style.display = 'block';
+        buttonExit.style.display = 'none';
     }
 )
-
-blackButton.addEventListener(
-    'click',
-    () => {
-        enterBlack.style.display = 'block';
-        optionBlack.style.borderColor = 'hsl(176, 50%, 47%)';
-        iconBlack.innerHTML = '<i class="fas fa-dot-circle"></i>';
-        enterBamboo.style.display = 'none';
-        optionBamboo.style.borderColor = ' rgb(236, 233, 233)';
-        iconBamboo.innerHTML = '<i class="far fa-circle"></i>';
-    }
-)
-
-continueButtons.forEach(continueButton => {
-    continueButton.addEventListener(
-        'click',
-        () => {
-            support.style.display = 'none';
-            thanks.style.display = 'block';
-        }
-    )
-})
 
 exit.addEventListener(
     'click',
@@ -196,16 +220,6 @@ buttonMenu.addEventListener(
 
     }
 
-)
-
-buttonExit.addEventListener(
-    'click',
-    () => {
-        navLinks.classList.remove('nav__links-click');
-        overlay.style.display = 'none';
-        buttonMenu.style.display = 'block';
-        buttonExit.style.display = 'none';
-    }
 )
 
 navLinkItem.forEach(element => element.addEventListener(
