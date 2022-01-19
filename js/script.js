@@ -1,37 +1,39 @@
-var selectButton = document.querySelectorAll('.select__button')
-var selectButtonMain = document.querySelector('.select__button-main')
-var support = document.querySelector('.support')
-var exit = document.querySelector('.support__exit')
-var bambooButton = document.querySelector('.bamboo__button')
-var blackButton = document.querySelector('.black__button')
-var enterBamboo = document.querySelector('.enter__bamboo')
-var enterBlack = document.querySelector('.enter__black')
-var overlay = document.querySelector('.overlay')
-var continueButtons = document.querySelectorAll('.option__enter-button')
-var thanks = document.querySelector('.thanks')
-var thanksButton = document.querySelector('.thanks__button')
-var noReward = document.querySelector('.option__header-free')
-var buttonMenu = document.querySelector('.button__menu')
-var navLinks = document.querySelector('.nav__links')
-var buttonExit = document.querySelector('.button__exit')
-var navLinksClick = document.querySelector('.nav__links-click')
-var navLinkItem = document.querySelectorAll('.nav__link-item')
-var inputBamboo = document.querySelector('.input__bamboo')
-var inputBlack = document.querySelector('.input__black')
-var continueBlack = document.querySelector('.continue__black')
-var continueBamboo = document.querySelector('.continue__bamboo')
-var bookmarkButton = document.querySelector('.hero__bookmark')
-var bookmarkIcon = document.querySelector('.hero__bookmark-icon')
-var bookmarkText = document.querySelector('.hero__bookmark-text')
-var numbersLeft = document.querySelector('.numbers__left')
-var backers = document.querySelector('.backers')
-var line = document.querySelector('.numbers__line-blue')
-var optionBamboo = document.querySelector('.option__bamboo')
-var optionBlack = document.querySelector('.option__black')
-var iconBlack = document.querySelector('.option__icon-black')
-var iconBamboo = document.querySelector('.option__icon-bamboo')
-var blackNumberLeft = document.querySelectorAll('.black__number-left')
-var bambooNumberLeft = document.querySelectorAll('.bamboo__number-left')
+const selectButton = document.querySelectorAll('.select__button')
+const selectButtonMain = document.querySelector('.select__button-main')
+const support = document.querySelector('.support')
+const exit = document.querySelector('.support__exit')
+const bambooButton = document.querySelector('.bamboo__button')
+const blackButton = document.querySelector('.black__button')
+const enterBamboo = document.querySelector('.enter__bamboo')
+const enterBlack = document.querySelector('.enter__black')
+const overlay = document.querySelector('.overlay')
+const continueButtons = document.querySelectorAll('.option__enter-button')
+const thanks = document.querySelector('.thanks')
+const thanksButton = document.querySelector('.thanks__button')
+const noReward = document.querySelector('.option__header-free')
+const buttonMenu = document.querySelector('.button__menu')
+const navLinks = document.querySelector('.nav__links')
+const buttonExit = document.querySelector('.button__exit')
+const navLinksClick = document.querySelector('.nav__links-click')
+const navLinkItem = document.querySelectorAll('.nav__link-item')
+const inputBamboo = document.querySelector('.input__bamboo')
+const inputBlack = document.querySelector('.input__black')
+const continueBlack = document.querySelector('.continue__black')
+const continueBamboo = document.querySelector('.continue__bamboo')
+const bookmarkButton = document.querySelector('.hero__bookmark')
+const bookmarkIcon = document.querySelector('.hero__bookmark-icon')
+const bookmarkText = document.querySelector('.hero__bookmark-text')
+const numbersLeft = document.querySelector('.numbers__left')
+const backers = document.querySelector('.backers')
+const line = document.querySelector('.numbers__line-blue')
+const optionBamboo = document.querySelector('.option__bamboo')
+const optionBlack = document.querySelector('.option__black')
+const iconBlack = document.querySelector('.option__icon-black')
+const iconBamboo = document.querySelector('.option__icon-bamboo')
+const blackNumberLeft = document.querySelectorAll('.black__number-left')
+const bambooNumberLeft = document.querySelectorAll('.bamboo__number-left')
+const alertBamboo = document.querySelector('.option__alert-bamboo')
+const alertBlack = document.querySelector('.option__alert-black')
 var babooNumber = 101
 var blackNumber = 64
 var number = 89.914
@@ -39,7 +41,7 @@ var backersNumber = 5.007
 var state = 0
 var lineWidth = 60
 
-function reset() {
+const reset = function () {
     support.style.display = 'none';
     overlay.style.display = 'none';
     thanks.style.display = 'none';
@@ -88,6 +90,8 @@ bambooButton.addEventListener(
         enterBlack.style.display = 'none';
         optionBlack.style.borderColor = 'rgb(236, 233, 233)';
         iconBlack.innerHTML = '<i class="far fa-circle"></i>';
+        inputBamboo.value = ''
+        alertBlack.style.display = 'none';
     }
 )
 
@@ -100,6 +104,8 @@ blackButton.addEventListener(
         enterBamboo.style.display = 'none';
         optionBamboo.style.borderColor = ' rgb(236, 233, 233)';
         iconBamboo.innerHTML = '<i class="far fa-circle"></i>';
+        inputBlack.value = ''
+        alertBamboo.style.display = 'none';
     }
 )
 
@@ -115,11 +121,15 @@ continueButtons.forEach(continueButton => {
 
 inputBamboo.addEventListener(
     'input',
-    () => {
-        if (inputBamboo.value < 25) {
+    (event) => {
+        inputValue = event.target.value
+        if (inputValue < 25) {
             continueBamboo.disabled = true;
+            alertBamboo.style.display = 'block'
+            alertBamboo.innerText  = 'input value must be more than 24'
         } else {
             continueBamboo.disabled = false;
+            alertBamboo.style.display = 'none'
 
             var newNumber = number + (Number(inputBamboo.value) * 0.001);
             numbersLeft.innerHTML = '$' + newNumber.toFixed(3);
@@ -150,11 +160,15 @@ continueBamboo.addEventListener(
 
 inputBlack.addEventListener(
     'input',
-    () => {
-        if (inputBlack.value < 75) {
+    (event) => {
+        inputValue = event.target.value
+        if (inputValue < 75) {
             continueBlack.disabled = true;
+            alertBlack.style.display = 'block'
+            alertBlack.innerText  = 'input value must be more than 74';
         } else {
             continueBlack.disabled = false;
+            alertBlack.style.display = 'none'
 
             var newNumber = number + (Number(inputBlack.value) * 0.001);
             numbersLeft.innerHTML = '$' + newNumber.toFixed(3);
